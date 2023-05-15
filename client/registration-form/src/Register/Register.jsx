@@ -23,7 +23,7 @@ const Register = () => {
         setErr("Password length should be minimum 6 characters");
         return;
       }
-      fetch("https://localhost:8001/register", {
+      fetch("http://localhost:8001/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

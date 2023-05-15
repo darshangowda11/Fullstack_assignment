@@ -16,13 +16,12 @@ const Login = () => {
     }
     console.log(data);
     setErr("");
-    fetch("https://localhost:8081/login", {
+    fetch("http://localhost:8001/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-      credentials: 'include',
     })
     .then((res) => {
         return res.json();
@@ -38,8 +37,8 @@ const Login = () => {
           const token = result.message.token;
           console.log(result.message.userdetails)
           console.log(result.message.token)
-          // JSON.stringify(localStorage.setItem("token", token));
-          // JSON.stringify(localStorage.setItem("user",JSON.stringify(result.message.userdetails)));
+          JSON.stringify(localStorage.setItem("token", token));
+          JSON.stringify(localStorage.setItem("user",JSON.stringify(result.message.userdetails)));
           Cookies.set('token', token);
           Cookies.set('user', result.message.userdetails);
           navigate("/home");
