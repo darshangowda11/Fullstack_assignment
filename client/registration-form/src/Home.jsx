@@ -17,7 +17,6 @@ const Home = () => {
     Cookies.remove('token')
     console.log("removed token")
     window.location.href = '/login';
-    return 
     //<Navigate to="/login" />;
    // history.push('/login')
   }

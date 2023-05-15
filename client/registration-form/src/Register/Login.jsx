@@ -37,8 +37,8 @@ const Login = () => {
           const token = result.message.token;
           console.log(result.message.userdetails)
           console.log(result.message.token)
-          JSON.stringify(localStorage.setItem("token", token));
-          JSON.stringify(localStorage.setItem("user",JSON.stringify(result.message.userdetails)));
+          //JSON.stringify(localStorage.setItem("token", token));
+          //JSON.stringify(localStorage.setItem("user",JSON.stringify(result.message.userdetails)));
           Cookies.set('token', token);
           Cookies.set('user', result.message.userdetails);
           navigate("/home");

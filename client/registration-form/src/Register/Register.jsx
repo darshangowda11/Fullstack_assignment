@@ -40,9 +40,9 @@ const Register = () => {
           navigate("/login");
         })
         .catch((err) => {
-          // if (err.response.status === 409)
-          //     setErr("User already exists with the given email. Try log in");
-          // else setErr('Something"s wrong, Try again');
+          if (err.response.status === 409)
+              setErr("User already exists with the given email. Try log in");
+          else setErr('Something"s wrong, Try again');
           console.log(err);
         });
     } else {
