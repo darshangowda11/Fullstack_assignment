@@ -6,7 +6,7 @@ const connectionParams = {
 };
 
 mongoose
-  .connect('mongodb://localhost/mydatabase', connectionParams)
+  .connect(process.env.MONGODB_URI, connectionParams)
   .then(() => {
     console.log('Connected to MongoDB');
   })
