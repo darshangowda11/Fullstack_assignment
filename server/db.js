@@ -6,7 +6,7 @@ const connectionParams = {
 };
 
 mongoose
-  .connect(process.env.MONGODB_URI, connectionParams)
+  .connect(process.env.MONGODB_URI || "mongodb+srv://darshanrgs45:darshanrgs45@cluster0.phsbb9v.mongodb.net/office-Solution?retryWrites=true&w=majority", connectionParams)
   .then(() => {
     console.log('Connected to MongoDB');
   })

@@ -3,7 +3,7 @@ const db = require("./db")
 const express = require("express")
 const app = express()
 const cors = require("cors");
-const port = process.env.PORT || 8000
+const port = process.env.PORT 
 const loginRoutes=require("./routes/Login")
 const registerRoutes=require("./routes/Register")
 

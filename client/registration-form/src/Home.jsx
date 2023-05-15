@@ -8,7 +8,8 @@ const Home = () => {
   const handleLogout = () => {
     const navigate = Navigate()
     Cookies.remove('token')
-    navigate("/login")
+    console.log("removed token")
+   navigate('/login')
   }
   return (
     <div>
@@ -20,9 +21,7 @@ const Home = () => {
           <Link href="/about" color="inherit" style={{ marginRight: '20px' }}>
             About
           </Link>
-          <Link href="/logout" color="inherit" onClick={handleLogout}>
-            logout
-          </Link>
+          {/* <button onClick={()=>{ handleLogout()}}>logout</button> */}
         </Toolbar>
       </AppBar>
       <Container maxWidth="sm" style={{ marginTop: '20px' }}>
