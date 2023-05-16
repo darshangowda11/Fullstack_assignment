@@ -1,7 +1,7 @@
-import Register from "./Register/Register";
-import Login from "./Register/Login";
-import Home from "./Home";
-import About from "./About";
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
+import Home from "./components/Home";
+import About from "./components/About";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 function App() {
   return (
